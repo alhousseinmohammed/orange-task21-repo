@@ -23,7 +23,7 @@
         return `You will be a ${X} in ${Y}, and married to ${Z} with ${N} kids.`;
       }
 
-      alert(tellFortune("software engineer", "Jordan", "Alice", 3));
+      console.log(tellFortune("software engineer", "Jordan", "Alice", 3));
 
       /*
       2
@@ -43,7 +43,7 @@
         return `Your doggie is ${NN} years old in dog years!`;
       }
 
-      alert(calculateDogAge(1));
+      console.log(calculateDogAge(1));
 
       /*
       3
@@ -62,7 +62,7 @@
         return `You will need ${NN} cups of tea to last you until the ripe old age of 100`;
       }
 
-      alert(calculateSupply(30, 3));
+      console.log(calculateSupply(30, 3));
 
       /*
       4
@@ -78,7 +78,7 @@
         return "Hello " + name;
       }
 
-      alert(greet("Adam"));
+      console.log(greet("Adam"));
 
       /*
       5
@@ -93,7 +93,7 @@
         return 2 * 7;
       }
 
-        //ANSEWR: 7 is not a variable name. Parameter can only be variables' names;
+        //ANSEWR: 7 is not a variable name. Parameters can only be variables' names;
 
       function double('7') {
         return 2 * 'x';
@@ -146,7 +146,7 @@
         return N * N * N;
       }
 
-      alert(cube(4));
+      console.log(cube(4));
 
       /*
       8
@@ -163,7 +163,7 @@
         return A * B;
       }
 
-      alert(multiply(3, 4));
+      console.log(multiply(3, 4));
 
       /*
       9
@@ -192,8 +192,8 @@
         }
       }
 
-      alert(canIGetADrivingLicense(2));
-      alert(canIGetADrivingLicense(21));
+      console.log(canIGetADrivingLicense(2));
+      console.log(canIGetADrivingLicense(21));
 
       /*
       10
@@ -214,9 +214,9 @@
         return S1.length === S2.length;
       }
 
-      alert(sameLength("tree", "clue"));
+      console.log(sameLength("tree", "clue"));
 
-      alert(sameLength("tree", "car"));
+      console.log(sameLength("tree", "car"));
 
       /*
       11
@@ -235,9 +235,9 @@
         return (larger = A >= B ? A : B);
       }
 
-      alert(largerNumber(5, 6));
+      console.log(largerNumber(5, 6));
 
-      alert(largerNumber(5, 3));
+      console.log(largerNumber(5, 3));
 
       /*
       12
@@ -258,7 +258,6 @@
       => 3
 
       */
-      alert("...........................................");
 
       function smallerNumber(A, B, C) {
         smaller = A <= B ? A : B;
@@ -266,13 +265,13 @@
         return smaller;
       }
 
-      alert(smallerNumber(8, 6, 7));
+      console.log(smallerNumber(8, 6, 7));
 
-      alert(smallerNumber(5, 99, 34));
+      console.log(smallerNumber(5, 99, 34));
 
-      alert(smallerNumber(5, 99, 3));
+      console.log(smallerNumber(5, 99, 3));
 
-      alert(smallerNumber(5, 3, 3));
+      console.log(smallerNumber(5, 3, 3));
 
       /*
       13
@@ -302,6 +301,27 @@
 
       */
 
+      function shorterString(A, B, C, D, E) {
+        let shorter = A;
+        shorter = B.length < shorter.length ? B : shorter;
+        shorter = C.length < shorter.length ? C : shorter;
+        shorter = D.length < shorter.length ? D : shorter;
+        shorter = E.length < shorter.length ? E : shorter;
+        return shorter;
+      }
+
+      console.log(shorterString("air", "school", "car", "by", "github"));
+
+      console.log(shorterString("air", "tr", "car", "by", "github"));
+
+      console.log(shorterString("by", "tr", "car", "air", "github"));
+
+      console.log(shorterString("air", "by", "car", "school", "github"));
+
+      console.log(shorterString("air", "tr", "by", "car", "github"));
+
+      console.log(shorterString("air", "tr", "car", "github", "by"));
+
       /*
       14
       Write a function called longerString
@@ -317,6 +337,20 @@
       try all the cases (change the order of the longestString)
       */
 
+      function longerString(A, B, C, D) {
+        let longer = A;
+        longer = B.length > longer.length ? B : longer;
+        longer = C.length > longer.length ? C : longer;
+        longer = D.length > longer.length ? D : longer;
+        return longer;
+      }
+
+      console.log(longerString("air", "school", "car", "github"));
+
+      console.log(longerString("air", "schoo", "car", "github"));
+
+      console.log(longerString("air", "schoo", "car", "github"));
+
       /*
       15
       Write a function called isEven
@@ -330,6 +364,14 @@
       => true
 
       */
+
+      function isEven(A) {
+        return A % 2 == 0;
+      }
+
+      console.log(isEven(1));
+
+      console.log(isEven(2));
 
       /*
       16
@@ -345,6 +387,14 @@
 
       */
 
+      function isOdd(A) {
+        return A % 2 == 1;
+      }
+
+      console.log(isOdd(4));
+
+      console.log(isOdd(5));
+
       /*
       17
       Write a function called positive
@@ -357,6 +407,14 @@
       => 5
 
       */
+
+      function positive(A) {
+        return (result = A >= 0 ? A : A * -1);
+      }
+
+      console.log(positive(4));
+
+      console.log(positive(-5));
 
       /*
       18
@@ -371,6 +429,14 @@
       => "Alex Mercer"
       */
 
+      function fullName(firstName, secondName) {
+        return firstName.concat(" ", secondName);
+      }
+
+      console.log(fullName("Adam", "McCallen"));
+
+      console.log(fullName("Alex", "Mercer"));
+
       /*
       19
       Write a function called average
@@ -384,6 +450,14 @@
       => 5.8
 
       */
+
+      function average(A, B, C, D, E) {
+        return (A + B + C + D + E) / 5;
+      }
+
+      console.log(average(1, 2, 3, 4, 5));
+
+      console.log(average(5, 7, 9, 3, 5));
 
       /*
       20
@@ -400,6 +474,14 @@
 
       */
 
+      function randomNUmber() {
+        return Math.random();
+      }
+
+      console.log(randomNUmber());
+
+      console.log(randomNUmber());
+
       /*
       21
       Write a function called randomBetweenNumbers
@@ -414,6 +496,14 @@
       => 23
 
       */
+
+      function randomBetweenNumbers(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+
+      console.log(randomBetweenNumbers(1, 8));
+
+      console.log(randomBetweenNumbers(3, 100));
 
       /*
       22
@@ -436,6 +526,41 @@
       => "C"
       */
 
+      function scoreInUniversty(mark) {
+        if (mark >= 95 && mark <= 100) {
+          return "A";
+        } else if (mark >= 85 && mark <= 94) {
+          return "B";
+        } else if (mark >= 70 && mark <= 84) {
+          return "C";
+        } else if (mark >= 50 && mark <= 69) {
+          return "D";
+        } else if (mark >= 0 && mark <= 49) {
+          return "F";
+        }
+      }
+
+      function scoreInUniversty(mark) {
+        switch (true) {
+          case mark >= 95 && mark <= 100:
+            return "A";
+          case mark >= 85 && mark <= 94:
+            return "B";
+          case mark >= 70 && mark <= 84:
+            return "C";
+          case mark >= 50 && mark <= 69:
+            return "D";
+          default:
+            return "F";
+        }
+      }
+
+      console.log(scoreInUniversty(96));
+
+      console.log(scoreInUniversty(3));
+
+      console.log(scoreInUniversty(71));
+
       /*
       23
       Write a function called counter
@@ -453,6 +578,17 @@
       => 3
 
       */
+
+      var last = 0;
+      function counter() {
+        return ++last;
+      }
+
+      console.log(counter());
+
+      console.log(counter());
+
+      console.log(counter());
 
       /*
       24
@@ -485,6 +621,21 @@
       Ex: counter()
       => 1
       */
+
+      function resetCounter() {
+        console.log(last + " and the counter reset now");
+        last = 0;
+      }
+
+      console.log(counter());
+
+      console.log(counter());
+
+      console.log(counter());
+
+      resetCounter();
+
+      console.log(counter());
     </script>
   </body>
 </html>
